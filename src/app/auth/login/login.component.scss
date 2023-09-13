@@ -1,0 +1,25 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Optional: Center vertically on the entire viewport height
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px; // Adjust the maximum width as needed
+  padding: 16px;
+  text-align: center;
+  margin: 0 auto; // Center the card horizontally
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: red; /* Set the text color to red or your preferred color */
+  font-size: 14px; /* Adjust the font size as needed */
+  margin-top: 8px; /* Add some top margin for separation */
+}

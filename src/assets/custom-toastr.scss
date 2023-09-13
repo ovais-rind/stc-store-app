@@ -1,0 +1,14 @@
+/* Custom styles for toasts */
+.toast {
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px; // Rounded corners
+}
+
+.toast-success {
+  background-color: #4CAF50;
+}
+
+.toast-error {
+  background-color: #FF5722;
+}

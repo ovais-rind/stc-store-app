@@ -1,29 +1,26 @@
+// app.module.ts
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Add this line
-import { FormsModule } from '@angular/forms'; // Add this line
-import { MatButtonModule } from '@angular/material/button'; // Add this line
-import { MatInputModule } from '@angular/material/input'; // Add this line
-import { MatFormFieldModule } from '@angular/material/form-field'; // Add this line
-import { MatCardModule } from '@angular/material/card'; // Add this line
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { authReducer } from './auth/auth.reducer';
+import { AuthEffects } from './auth/auth.effects';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, // Add this line
-    FormsModule, // Add this line
-    MatButtonModule, // Add this line
-    MatInputModule, // Add this line
-    MatFormFieldModule, // Add this line
-    MatCardModule // Add this line
+    BrowserAnimationsModule,
+    StoreModule.forRoot({ auth: authReducer }),
+    EffectsModule.forRoot([AuthEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
-export class AppModule { }
+export class AppModule {}

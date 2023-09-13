@@ -1,17 +1,27 @@
+// app-routing.module.ts
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
-import { ProtectedComponent } from './auth/protected/protected.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login by default
-  { path: 'login', component: LoginComponent },
-  { path: 'protected', component: ProtectedComponent }
-  // You can add other routes and guards as needed
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
+      canActivate: [AuthGuard]
+  },
+  // Add other lazy-loaded routes as needed
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
