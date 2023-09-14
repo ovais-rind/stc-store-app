@@ -1,0 +1,27 @@
+.confirmation-title {
+    color: #ff4081;
+  }
+  
+  .confirmation-message {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .product-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .confirmation-actions {
+    justify-content: flex-end;
+  
+    .cancel-button {
+      color: #007bff;
+    }
+  
+    .confirm-button {
+      background-color: #ff4081;
+      color: white;
+    }
+  }
+  

@@ -1,7 +1,14 @@
-<mat-toolbar color="primary">
-  <button mat-button routerLink="/other-page">Other Page</button>
-  <span class="spacer"></span>
-  <button mat-button (click)="logout()">Logout</button>
+<div class="header-container">
+  <mat-toolbar color="primary">
+    <!-- Logo or application title -->
+    <span class="app-title">STC STORE APP</span>
+    
+    <!-- Spacer to push elements to the right -->
+    <div class="spacer"></div>
 
+    <!-- Logout button -->
+    <div class="logout-container">
+      <button mat-button mat-raised-button color="primary" class="header-btn" (click)="logout()">Logout</button>
+    </div>
   </mat-toolbar>
-  
+</div>

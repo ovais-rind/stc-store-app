@@ -1,0 +1,26 @@
+.form-field {
+    margin-bottom: 16px; /* Add spacing between form fields */
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Make form fields full-width */
+  }
+  
+  .mat-input-element {
+    padding: 8px; /* Adjust padding to make the fields more compact */
+  }
+
+  .add-actions {
+    justify-content: flex-end;
+  
+    .cancel-button {
+      color: #007bff;
+    }
+  
+    .save-button {
+      background-color: #0056b3;
+      color: white;
+    }
+  }
+  
+  
