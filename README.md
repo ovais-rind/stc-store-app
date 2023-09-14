@@ -21,3 +21,16 @@ Follow these steps to install and run the project:
    ```bash
    git clone git@github.com:ovais-rind/stc-store-app.git
    ```
+
+2. Change to the project directory:
+   cd stc-store-app
+
+3. Install project dependencies:
+   npm install
+
+   # or
+
+   yarn install
+
+4. Start the application:  
+   npm run start
